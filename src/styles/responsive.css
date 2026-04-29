@@ -1,0 +1,17 @@
+@media (max-width: 900px) {
+
+  .kpi-bar {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 2000;
+  }
+
+}

@@ -1,0 +1,144 @@
+.sidebar {
+  width: var(--sidebar-width);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+
+  padding: var(--space-lg);
+
+  background: var(--bg-sidebar);
+
+  border-right: 1px solid var(--border-soft);
+
+  overflow-y: auto;
+}
+
+.sidebar-toggle {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: var(--text-main);
+
+  cursor: pointer;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-logo {
+  width: 140px;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.sidebar-section-title {
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--text-soft);
+}
+
+#survey-summary {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+#questions-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.question-item {
+  width: 100%;
+
+  display: flex;
+  gap: 12px;
+
+  padding: 14px;
+
+  border: 1px solid transparent;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: var(--text-main);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: var(--transition-fast);
+}
+
+.question-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.question-item.active {
+  border-color: #3b82f6;
+
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.question-number {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.question-title {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.questions-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.questions-group-title {
+  padding: 0 4px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--text-soft);
+}

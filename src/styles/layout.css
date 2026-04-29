@@ -1,0 +1,62 @@
+.app-layout {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.app-main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-lg);
+
+  padding: var(--space-lg);
+
+  overflow: hidden;
+}
+
+.dashboard-section {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+}
+
+.chart-card {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+
+  overflow: hidden;
+}
+
+.chart-title {
+  padding: 20px 24px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-bottom: 1px solid var(--border-soft);
+}
+
+#main-chart {
+  flex: 1;
+  min-height: 0;
+}
