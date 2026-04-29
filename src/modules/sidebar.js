@@ -1,7 +1,7 @@
-import { surveyData } from "../data.js";
-import { state, setActiveQuestion } from "../state.js";
+import { surveyData } from "../data/dashboard-survey-data.js";
+import { state, setActiveQuestion } from "./state.js";
 import { renderKpis } from "./kpi.js";
-import { renderChartPlaceholder } from "./charts.js";
+import { renderCharts } from "./charts.js";
 
 export function renderSidebar() {
   const container = document.getElementById("questions-list");
@@ -32,7 +32,7 @@ export function renderSidebar() {
 
       renderSidebar();
       renderKpis();
-      renderChartPlaceholder();
+      renderCharts();
     });
 
     container.appendChild(item);
