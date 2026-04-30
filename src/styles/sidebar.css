@@ -187,3 +187,27 @@
   opacity: 1;
   pointer-events: all;
 }
+
+.menu-toggle {
+  display: none;
+
+  position: fixed;
+  top: 16px;
+  left: 16px;
+
+  z-index: 1100;
+
+  background: var(--bg-panel);
+  border: 1px solid var(--border-soft);
+
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}

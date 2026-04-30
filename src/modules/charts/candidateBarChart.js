@@ -30,10 +30,14 @@ export function renderCandidateBarChart(chart, question) {
     ...chartTheme,
 
     grid: {
-      top: 40,
-      right: 40,
-      bottom: 40,
-      left: 180,
+      // top: 40,
+      // right: 40,
+      // bottom: 40,
+      // left: 180,
+      top: 20,
+      right: 20,
+      bottom: 20,
+      left: 120, // ← reducir desde 180
 
       containLabel: true,
     },
@@ -62,7 +66,8 @@ export function renderCandidateBarChart(chart, question) {
       axisLabel: {
         color: "#f8fafc",
 
-        fontSize: 22,
+        // fontSize: 22,
+        fontSize: 14,
 
         fontWeight: 700,
       },

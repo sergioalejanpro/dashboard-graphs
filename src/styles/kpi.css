@@ -53,3 +53,18 @@
 
   line-height: 1;
 }
+
+@media (max-width: 768px) {
+  #kpi-bar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .kpi-card {
+    padding: 16px;
+  }
+
+  .kpi-value {
+    font-size: 28px;
+  }
+}
