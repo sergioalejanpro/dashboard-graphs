@@ -3,6 +3,30 @@ import { state, setActiveQuestion } from "./state.js";
 import { renderKpis } from "./kpi.js";
 import { renderCharts } from "./charts.js";
 
+const sidebar = document.querySelector(".sidebar");
+const overlay = document.getElementById("sidebar-overlay");
+const toggleBtn = document.getElementById("menu-toggle");
+
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+export function initSidebarToggle() {
+  toggleBtn.addEventListener("click", () => {
+    if (!isMobile()) return;
+
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("open");
+  });
+
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("open");
+    });
+  }
+}
+
 export function renderSidebar() {
   const container = document.getElementById("questions-list");
 
