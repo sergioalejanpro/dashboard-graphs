@@ -62,3 +62,11 @@ export function renderSidebar() {
     container.appendChild(item);
   });
 }
+
+function toggleSidebar() {
+  const isOpen = sidebar.classList.toggle("open");
+
+  overlay.classList.toggle("open");
+
+  document.body.style.overflow = isOpen ? "hidden" : "auto";
+}
