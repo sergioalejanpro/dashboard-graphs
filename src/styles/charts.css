@@ -89,3 +89,7 @@
     padding: 12px;
   }
 }
+
+#main-chart {
+  min-height: 260px;
+}

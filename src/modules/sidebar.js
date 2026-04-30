@@ -54,6 +54,10 @@ export function renderSidebar() {
     item.addEventListener("click", () => {
       setActiveQuestion(question.id);
 
+      if (isMobile()) {
+        closeSidebar();
+      }
+
       renderSidebar();
       renderKpis();
       renderCharts();
@@ -69,4 +73,14 @@ function toggleSidebar() {
   overlay.classList.toggle("open");
 
   document.body.style.overflow = isOpen ? "hidden" : "auto";
+}
+
+function closeSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  const overlay = document.getElementById("sidebar-overlay");
+
+  sidebar.classList.remove("open");
+  overlay?.classList.remove("open");
+
+  document.body.style.overflow = "";
 }

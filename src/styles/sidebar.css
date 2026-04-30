@@ -189,7 +189,7 @@
 }
 
 .menu-toggle {
-  display: none;
+  /* display: none; */
 
   position: fixed;
   top: 12px;
