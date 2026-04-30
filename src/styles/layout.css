@@ -102,9 +102,9 @@
   }
 }
 
-/* .menu-toggle {
-  display: none;
-} */
+.menu-toggle {
+  display: block !important;
+}
 
 @media (max-width: 768px), (max-height: 500px) {
   .menu-toggle {
