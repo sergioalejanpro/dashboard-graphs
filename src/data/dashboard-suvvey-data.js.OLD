@@ -77,8 +77,29 @@ export const surveyData = {
       answers: ["Si", "No"],
     },
     {
-      id: "q_8b",
+      id: "q_8",
       number: 8,
+      shortTitle: "Partido Político",
+      title: "¿Con qué partido político lo relaciona?",
+      type: "label-only",
+      results: [
+        {
+          candidateId: "cand_a",
+          label: "Morena",
+        },
+        {
+          candidateId: "cand_b",
+          label: "PAN",
+        },
+        {
+          candidateId: "cand_c",
+          label: "Verde",
+        },
+      ],
+    },
+    {
+      id: "q_9",
+      number: 9,
       shortTitle: "Opinión",
       title: "¿Cuál es su opinión de esta persona?",
       type: "grouped-bar",
@@ -138,8 +159,8 @@ export const surveyData = {
       answers: ["Buena", "Regular", "Mala"],
     },
     {
-      id: "q_9",
-      number: 9,
+      id: "q_10",
+      number: 10,
       shortTitle: "Honestidad",
       title: "¿Lo considera honesto?",
       type: "grouped-bar",
@@ -199,10 +220,11 @@ export const surveyData = {
       answers: ["Mucho", "Poco", "Nada"],
     },
     {
-      id: "q_10",
-      number: 10,
+      id: "q_11",
+      number: 11,
       shortTitle: "Buen candidato",
-      title: "¿Lo considera buen candidato?",
+      title:
+        "En los próximos días Morena eligirá candidato para la Gubernatura o alcaldía ¿a quién prefiere?",
       type: "grouped-bar",
       results: [
         {
@@ -246,29 +268,6 @@ export const surveyData = {
         },
       ],
       answers: ["Si", "No"],
-    },
-    {
-      id: "q_11",
-      number: 11,
-      shortTitle: "A quién prefere",
-      title: "¿A quién prefiere para candidato de Morena?",
-      type: "candidate-bar",
-      results: [
-        {
-          candidateId: "cand_a",
-          percentage: 48,
-        },
-
-        {
-          candidateId: "cand_b",
-          percentage: 30,
-        },
-
-        {
-          candidateId: "cand_c",
-          percentage: 22,
-        },
-      ],
     },
   ],
 };

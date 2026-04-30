@@ -1,6 +1,6 @@
 import { renderGroupedBarChart } from "./groupedBarChart.js";
-
 import { renderLabelCards } from "./labelCards.js";
+import { renderCandidateBarChart } from "./candidateBarChart.js";
 
 let chartInstance = null;
 
@@ -28,6 +28,16 @@ export function renderChart(question) {
     container.innerHTML = "";
 
     chartInstance = echarts.init(container);
+  }
+
+  if (question.type === "candidate-bar") {
+    if (!chartInstance) {
+      chartInstance = echarts.init(container);
+    }
+
+    renderCandidateBarChart(chartInstance, question);
+
+    return;
   }
 
   renderGroupedBarChart(chartInstance, question);

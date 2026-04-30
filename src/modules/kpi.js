@@ -19,6 +19,12 @@ export function renderKpis() {
     return;
   }
 
+  if (question.type === "candidate-bar") {
+    renderCandidateBarKpis(container, question);
+
+    return;
+  }
+
   if (question.type !== "grouped-bar") {
     return;
   }
@@ -76,6 +82,36 @@ function renderLabelKpis(container, question) {
 
       <div class="kpi-value">
         ${result.label}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function renderCandidateBarKpis(container, question) {
+  const sortedResults = [...question.results].sort(
+    (a, b) => b.percentage - a.percentage,
+  );
+
+  sortedResults.forEach((result) => {
+    const candidate = surveyData.candidates.find(
+      (c) => c.id === result.candidateId,
+    );
+
+    const card = document.createElement("article");
+
+    card.className = "kpi-card";
+
+    card.style.setProperty("--candidate-color", candidate.color);
+
+    card.innerHTML = `
+      <div class="kpi-name">
+        ${candidate.name}
+      </div>
+
+      <div class="kpi-value">
+        ${result.percentage}%
       </div>
     `;
 
