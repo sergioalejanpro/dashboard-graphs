@@ -22,6 +22,8 @@ export function renderGroupedBarChart(chart, question) {
     };
   });
 
+  chart.clear();
+
   chart.setOption({
     ...chartTheme,
 
