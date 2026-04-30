@@ -15,3 +15,61 @@
 
   font-size: 14px;
 }
+
+.label-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  padding: 24px;
+}
+
+.label-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 220px;
+
+  padding: 24px;
+
+  background: var(--bg-panel);
+
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+}
+
+.label-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 4px;
+
+  background: var(--candidate-color);
+}
+
+.label-card-name {
+  font-size: 14px;
+
+  color: var(--text-soft);
+}
+
+.label-card-value {
+  font-size: 36px;
+  font-weight: 700;
+
+  line-height: 1.1;
+}

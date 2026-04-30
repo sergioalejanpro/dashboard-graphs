@@ -39,7 +39,13 @@ export function renderGroupedBarChart(chart, question) {
       data: categories,
 
       axisLabel: {
-        color: "#94a3b8",
+        color: "#f8fafc",
+
+        fontSize: 24,
+
+        fontWeight: 700,
+
+        margin: 18,
       },
     },
 
